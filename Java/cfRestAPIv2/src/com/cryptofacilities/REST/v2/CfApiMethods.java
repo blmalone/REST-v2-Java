@@ -184,7 +184,7 @@ public class CfApiMethods {
 	/*---------------------------Public Endpoints-----------------------------------------------*/
 
 	// Returns key account information
-	// Depreciated because it returns info about the Futures margin account only
+	// Deprecated because it returns info about the Futures margin account only
 	// Use getAccounts instead
 	@Deprecated
 	public String getAccount() throws KeyManagementException, InvalidKeyException, MalformedURLException,
