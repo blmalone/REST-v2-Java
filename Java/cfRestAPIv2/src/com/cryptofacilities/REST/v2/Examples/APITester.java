@@ -75,9 +75,9 @@ public class APITester {
 		/*----------------------------Private Endpoints----------------------------------------------*/
 		methods = new CfApiMethods(apiPath,apiPublicKey,apiPrivateKey,timeout,checkCertificate);
 
-		//get account
-		result = methods.getAccount();
-		System.out.println("getAccount:\n" + result);
+		//get accounts
+		result = methods.getAccounts();
+		System.out.println("getAccounts:\n" + result);
 
 		//send limit order
 		orderType = "lmt";
