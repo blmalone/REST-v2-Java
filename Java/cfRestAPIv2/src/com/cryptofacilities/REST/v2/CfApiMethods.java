@@ -183,10 +183,20 @@ public class CfApiMethods {
 
 	/*---------------------------Public Endpoints-----------------------------------------------*/
 
-	// Returns all instruments with specifications
-	public String getInstruments() throws MalformedURLException, IOException, KeyManagementException,
-			NoSuchAlgorithmException, InvalidKeyException {
-		String endpoint = "/api/v2/instruments";
+	// Returns key account information
+	// Depreciated because it returns info about the Futures margin account only
+	// Use getAccounts instead
+	@Deprecated
+	public String getAccount() throws KeyManagementException, InvalidKeyException, MalformedURLException,
+			NoSuchAlgorithmException, IOException {
+		String endpoint = "/api/v2/account";
+		return makeRequest("GET", endpoint);
+	}
+	
+	// Returns key account information
+	public String getAccounts() throws KeyManagementException, InvalidKeyException, MalformedURLException,
+			NoSuchAlgorithmException, IOException {
+		String endpoint = "/api/v2/accounts";
 		return makeRequest("GET", endpoint);
 	}
 
